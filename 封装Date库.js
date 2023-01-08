@@ -90,26 +90,3 @@ time.prototype = {
 function padLeftZero(n) {
     return n > 10 ? '' + n : '0' + n
 }
-//使用方法
-const t = time()
-//set
-t.parts({
-    year: 2002,
-    month: 1,
-    day: 5,
-    hour: 1,
-    minute: 50,
-    second: 30,
-})
-//get
-const { year, month, day, hour, minute, second } = t.parts()
-console.log(t.date.toLocaleString());
-//add
-t.add(1, 'hour')
-console.log(t.date.toLocaleString());
-//isLeapYear
-console.log(t.isLeapYear());
-//lastDayOfMonth
-console.log(t.lastDayOfMonth().date.toLocaleString());
-//format
-console.log(t.format('yyyy年MM月dd日 HH:mm:ss'));
